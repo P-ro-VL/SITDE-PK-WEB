@@ -1,0 +1,45 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: LCK Title;
+  src: url(../src/assets/font/LCKTitle-Extended.ttf);
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: LCK Title;
+  src: url(../src/assets/font/LCKTitle-Extended.ttf);
+  font-weight: 500;
+}
+
+@font-face {
+  font-family: LCK Title;
+  src: url(../src/assets/font/LCKTitle-Extended.ttf);
+  font-weight: 600;
+}
+
+@font-face {
+  font-family: SVN-Gilroy;
+  src: url(../src/assets/font/SVN-Gilroy\ Regular.otf);
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: SVN-Gilroy;
+  src: url(../src/assets/font/SVN-Gilroy\ Medium.otf);
+  font-weight: 500;
+}
+
+@font-face {
+  font-family: SVN-Gilroy;
+  src: url(../src/assets/font/SVN-Gilroy\ SemiBold.otf);
+  font-weight: 600;
+}
+
+@font-face {
+  font-family: SVN-Gilroy;
+  src: url(../src/assets/font/SVN-Gilroy\ Bold.otf);
+  font-weight: 700;
+}
