@@ -1,11 +1,13 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 import { styled } from '@mui/material/styles';
 
 const NavbarDefault1 = styled('div')({
   backgroundColor: `rgba(255, 255, 255, 1)`,
   display: `flex`,
-  position: `relative`,
+  position: `fixed`,
+  zIndex: `20`,
   isolation: `isolate`,
   flexDirection: `row`,
   width: `100%`,
@@ -107,6 +109,10 @@ const About = styled('div')({
   textDecoration: `none`,
   textTransform: `none`,
   margin: `0px`,
+  cursor: `pointer`,
+  '&:hover': {
+    color: 'white',
+  },
 });
 
 const Download = styled('div')({
@@ -122,6 +128,10 @@ const Download = styled('div')({
   textDecoration: `none`,
   textTransform: `none`,
   margin: `0px 0px 0px 22px`,
+  cursor: `pointer`,
+  '&:hover': {
+    color: 'white',
+  },
 });
 
 const Features = styled('div')({
@@ -137,6 +147,10 @@ const Features = styled('div')({
   textDecoration: `none`,
   textTransform: `none`,
   margin: `0px 0px 0px 22px`,
+  cursor: `pointer`,
+  '&:hover': {
+    color: 'white',
+  },
 });
 
 const Contact = styled('div')({
@@ -152,6 +166,10 @@ const Contact = styled('div')({
   textDecoration: `none`,
   textTransform: `none`,
   margin: `0px 0px 0px 22px`,
+  cursor: `pointer`,
+  '&:hover': {
+    color: 'white',
+  },
 });
 
 const SitdeBayquamon = styled('div')({
@@ -167,9 +185,21 @@ const SitdeBayquamon = styled('div')({
   textDecoration: `none`,
   textTransform: `none`,
   margin: `0px 0px 0px 22px`,
+  cursor: `pointer`,
+  '&:hover': {
+    color: 'white',
+  },
 });
 
-export default function NavbarDefault() {
+export default function NavbarDefault({
+  scrollToTop,
+  scrollToAbout,
+  scrollToDownload,
+  scrollToFeatures,
+  scrollToContact,
+  highlight,
+  windowWidth,
+}) {
   return (
     <NavbarDefault1 className="fixed">
       s<Rectangle3></Rectangle3>
@@ -178,11 +208,45 @@ export default function NavbarDefault() {
       <Rectangle5></Rectangle5>
       <Q30>{`3.0`}</Q30>
       <Frame1>
-        <About>{`about`}</About>
-        <Download>{`download`}</Download>
-        <Features>{`features`}</Features>
-        <Contact>{`CONTACT`}</Contact>
-        <SitdeBayquamon>{`sitdeBAYQUAMON`}</SitdeBayquamon>
+        <About
+          onClick={() => {
+            setTimeout(() => {
+              scrollToAbout();
+            }, 100);
+          }}
+        >
+          {`about`}
+        </About>
+        <Download
+          onClick={() => {
+            setTimeout(() => {
+              scrollToDownload();
+            }, 100);
+          }}
+        >
+          {`download`}
+        </Download>
+        <Features
+          onClick={() => {
+            setTimeout(() => {
+              scrollToFeatures();
+            }, 100);
+          }}
+        >
+          {`features`}
+        </Features>
+        <Contact
+          onClick={() => {
+            setTimeout(() => {
+              scrollToContact();
+            }, 100);
+          }}
+        >
+          {`CONTACT`}
+        </Contact>
+        <Link to="https://fb.com/sitdebayquamon" target="_blank">
+          <SitdeBayquamon>{`sitdeBAYQUAMON`}</SitdeBayquamon>
+        </Link>
       </Frame1>
     </NavbarDefault1>
   );

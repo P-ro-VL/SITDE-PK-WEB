@@ -2,6 +2,11 @@ import React from 'react';
 
 import { styled } from '@mui/material/styles';
 
+import FeatureOne from '../assets/images/Features_1.png';
+import FeatureTwo from '../assets/images/Features_2.png';
+import FeatureThree from '../assets/images/Features_3.png';
+import FeatureFour from '../assets/images/Features_4.png';
+
 const Features1 = styled('div')({
   backgroundColor: `rgba(255, 255, 255, 1)`,
   display: `flex`,
@@ -51,38 +56,38 @@ const Group9 = styled('div')({
   top: `220px`,
 });
 
-const Rectangle11 = styled('div')({
-  backgroundColor: `rgba(217, 217, 217, 1)`,
+const Rectangle11 = styled('img')({
   width: `262px`,
   height: `262px`,
   position: `absolute`,
+  borderRadius: `10px`,
   left: `0px`,
   top: `0px`,
 });
 
-const Rectangle12 = styled('div')({
-  backgroundColor: `rgba(217, 217, 217, 1)`,
+const Rectangle12 = styled('img')({
   width: `262px`,
   height: `262px`,
   position: `absolute`,
+  borderRadius: `10px`,
   left: `0px`,
   top: `329px`,
 });
 
-const Rectangle13 = styled('div')({
-  backgroundColor: `rgba(217, 217, 217, 1)`,
+const Rectangle13 = styled('img')({
   width: `262px`,
   height: `262px`,
   position: `absolute`,
+  borderRadius: `10px`,
   left: `684px`,
   top: `0px`,
 });
 
-const Rectangle14 = styled('div')({
-  backgroundColor: `rgba(217, 217, 217, 1)`,
+const Rectangle14 = styled('img')({
   width: `262px`,
   height: `262px`,
   position: `absolute`,
+  borderRadius: `10px`,
   left: `684px`,
   top: `329px`,
 });
@@ -259,42 +264,44 @@ const CNgTómTTBCNgTómTTKiN = styled('div')({
   top: `7px`,
 });
 
-export default function Features() {
+export default function Features({ position }) {
   return (
-    <Features1>
-      <div
-        style={{ width: '100%' }}
-        className="flex justify-center items-center"
-      >
-        <Features2>{`FEATURES`}</Features2>
-        <Group9>
-          <Rectangle11></Rectangle11>
-          <Rectangle12></Rectangle12>
-          <Rectangle13></Rectangle13>
-          <Rectangle14></Rectangle14>
-          <BàiTPTheoChNgThASCÔn>
-            <BàiTPTheoChNgThASCÔnSpan1>{`BÀI TẬP THEO CHƯƠNG
+    <div ref={position}>
+      <Features1>
+        <div
+          style={{ width: '100%' }}
+          className="flex justify-center items-center"
+        >
+          <Features2>{`FEATURES`}</Features2>
+          <Group9>
+            <Rectangle11 src={FeatureOne} loading="lazy" />
+            <Rectangle12 src={FeatureTwo} loading="lazy" />
+            <Rectangle13 src={FeatureThree} loading="lazy" />
+            <Rectangle14 src={FeatureFour} loading="lazy" />
+            <BàiTPTheoChNgThASCÔn>
+              <BàiTPTheoChNgThASCÔnSpan1>{`BÀI TẬP THEO CHƯƠNG
 `}</BàiTPTheoChNgThASCÔnSpan1>
-            <BàiTPTheoChNgThASCÔnSpan3>{`Thỏa sức ôn luyện cùng với các học phần có sẵn trên SITDE PK. Bài ôn luyện được chia theo chương, sát với chương trình học của trường. Dễ dàng cho các bạn sinh viên ôn tập, nắm bắt được phần kiến thức còn yếu, hổng.`}</BàiTPTheoChNgThASCÔnSpan3>
-          </BàiTPTheoChNgThASCÔn>
-          <ThiThNhThiThTGNNCácK>
-            <ThiThNhThiThTGNNCácKSpan1>{`THI THỬ NHƯ THI THẬT
+              <BàiTPTheoChNgThASCÔnSpan3>{`Thỏa sức ôn luyện cùng với các học phần có sẵn trên SITDE PK. Bài ôn luyện được chia theo chương, sát với chương trình học của trường. Dễ dàng cho các bạn sinh viên ôn tập, nắm bắt được phần kiến thức còn yếu, hổng.`}</BàiTPTheoChNgThASCÔnSpan3>
+            </BàiTPTheoChNgThASCÔn>
+            <ThiThNhThiThTGNNCácK>
+              <ThiThNhThiThTGNNCácKSpan1>{`THI THỬ NHƯ THI THẬT
 `}</ThiThNhThiThTGNNCácKSpan1>
-            <ThiThNhThiThTGNNCácKSpan3>{`Gần đến các kỳ thi, SITDE PK sẽ mở các bài thi thử có thời gian mở cố định và không thể vào muộn quá 15 phút.
+              <ThiThNhThiThTGNNCácKSpan3>{`Gần đến các kỳ thi, SITDE PK sẽ mở các bài thi thử có thời gian mở cố định và không thể vào muộn quá 15 phút.
 Giao diện thi thử giống của trường mang lại cảm giác “thi thử như thi thật”, giúp sinh viên rèn luyện sự tự tin và bản lĩnh phòng thi.`}</ThiThNhThiThTGNNCácKSpan3>
-          </ThiThNhThiThTGNNCácK>
-          <VàVôSTínhNNgThúVKhác>
-            <VàVôSTínhNNgThúVKhácSpan1>{`VÀ VÔ SỐ TÍNH NĂNG THÚ VỊ KHÁC ....
+            </ThiThNhThiThTGNNCácK>
+            <VàVôSTínhNNgThúVKhác>
+              <VàVôSTínhNNgThúVKhácSpan1>{`VÀ VÔ SỐ TÍNH NĂNG THÚ VỊ KHÁC ....
 `}</VàVôSTínhNNgThúVKhácSpan1>
-            <VàVôSTínhNNgThúVKhácSpan3>{`Bên cạnh đó SITDE PK còn vô số tính năng thú vị khác như bói bài tarot, bấm giờ khoa học, ... đều sẽ là những trợ thủ đắc lực trong quá trình ôn luyện của các bạn sinh viên.`}</VàVôSTínhNNgThúVKhácSpan3>
-          </VàVôSTínhNNgThúVKhác>
-          <CNgTómTTBCNgTómTTKiN>
-            <CNgTómTTBCNgTómTTKiNSpan1>{`ĐỀ CƯƠNG TÓM TẮT
+              <VàVôSTínhNNgThúVKhácSpan3>{`Bên cạnh đó SITDE PK còn vô số tính năng thú vị khác như bói bài tarot, bấm giờ khoa học, ... đều sẽ là những trợ thủ đắc lực trong quá trình ôn luyện của các bạn sinh viên.`}</VàVôSTínhNNgThúVKhácSpan3>
+            </VàVôSTínhNNgThúVKhác>
+            <CNgTómTTBCNgTómTTKiN>
+              <CNgTómTTBCNgTómTTKiNSpan1>{`ĐỀ CƯƠNG TÓM TẮT
 `}</CNgTómTTBCNgTómTTKiNSpan1>
-            <CNgTómTTBCNgTómTTKiNSpan3>{`Bộ đề cương tóm tắt kiến thức siêu trọng tâm được biên soạn rất chi tiết từ Sitdebayquamon chắc chắn sẽ là cơ hội để các bạn sinh viên “lấy lại gốc” và rà soát kiến thức một cách nhanh chóng.`}</CNgTómTTBCNgTómTTKiNSpan3>
-          </CNgTómTTBCNgTómTTKiN>
-        </Group9>
-      </div>
-    </Features1>
+              <CNgTómTTBCNgTómTTKiNSpan3>{`Bộ đề cương tóm tắt kiến thức siêu trọng tâm được biên soạn rất chi tiết từ Sitdebayquamon chắc chắn sẽ là cơ hội để các bạn sinh viên “lấy lại gốc” và rà soát kiến thức một cách nhanh chóng.`}</CNgTómTTBCNgTómTTKiNSpan3>
+            </CNgTómTTBCNgTómTTKiN>
+          </Group9>
+        </div>
+      </Features1>
+    </div>
   );
 }

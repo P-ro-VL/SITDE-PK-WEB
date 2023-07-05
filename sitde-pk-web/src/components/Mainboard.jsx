@@ -124,15 +124,22 @@ const Group3 = styled('div')({
   display: `flex`,
   position: `absolute`,
   isolation: `isolate`,
-  flexDirection: `row`,
-  justifyContent: `flex-start`,
-  alignItems: `flex-start`,
+  flexdirection: `row`,
+  justifycontent: `flex-start`,
+  alignitems: `flex-start`,
   padding: `0px`,
-  boxSizing: `border-box`,
+  boxsizing: `border-box`,
   width: `416px`,
   height: `76px`,
   left: `85px`,
-  top: `548px`,
+  top: `610px`,
+  color: `white`,
+  borderRadius: `20px`,
+  cursor: `pointer`,
+  '&:hover': {
+    background: `linear-gradient(-35deg, rgba(108, 202, 255, 1) -3.0616171314629196e-15%, rgba(75, 141, 178, 1) 99.99999999999999%)`,
+    textShadow: `2.5px 2.5px rgba(0, 0, 0, 0.15)`,
+  },
 });
 
 const Rectangle2 = styled('div')({
@@ -144,22 +151,23 @@ const Rectangle2 = styled('div')({
   height: `76px`,
   position: `absolute`,
   left: `0px`,
-  top: `50px`,
+  top: `0px`,
 });
 
 const IconsaxBoldWindows = styled('img')({
   height: `50px`,
   width: `50px`,
   position: `absolute`,
+  //  '-webkit-filter': `drop-shadow(5px 5px 5px #222222)`,
+  filter: `drop-shadow(2.5px 2.5px 1px rgba(0, 0, 0, 0.15))`,
   left: `25px`,
-  top: `63px`,
+  top: `14px`,
 });
 
 const TIXuNgChoWindows = styled('div')({
   textAlign: `left`,
   whiteSpace: `pre-wrap`,
   fontSynthesis: `none`,
-  color: `rgba(255, 255, 255, 1)`,
   fontStyle: `normal`,
   fontFamily: `SVN-Gilroy`,
   fontWeight: `700`,
@@ -169,7 +177,7 @@ const TIXuNgChoWindows = styled('div')({
   textTransform: `none`,
   position: `absolute`,
   left: `89px`,
-  top: `65px`,
+  top: `18px`,
 });
 
 const PhNMMHTrSinhViênÔnTP = styled('div')({
@@ -190,7 +198,7 @@ const PhNMMHTrSinhViênÔnTP = styled('div')({
   top: `399px`,
 });
 
-function Mainboard() {
+function Mainboard({ scrollToDownload }) {
   return (
     <Mainboard1>
       <Wallpaper src={WallpaperImage} loading="lazy" alt={'wallpaper'} />
@@ -202,13 +210,15 @@ function Mainboard() {
         <Rectangle1></Rectangle1>
         <Sitdepk1 src={Sitdepk1Image} loading="lazy" alt={'sitdepk1'} />
       </Group1>
-      <Group3>
+      <Group3
+        onClick={() => {
+          setTimeout(() => {
+            scrollToDownload();
+          }, 100);
+        }}
+      >
         <Rectangle2></Rectangle2>
-        <IconsaxBoldWindows
-          src={IconsaxBoldWindowsImage}
-          loading="lazy"
-          alt={'Iconsax/Bold/windows'}
-        />
+        <IconsaxBoldWindows src={IconsaxBoldWindowsImage} loading="lazy" />
         <TIXuNgChoWindows>{`Tải xuống cho Windows`}</TIXuNgChoWindows>
       </Group3>
       <PhNMMHTrSinhViênÔnTP>

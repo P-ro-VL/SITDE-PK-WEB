@@ -1,4 +1,5 @@
 import React from 'react';
+import { Navigate } from 'react-router-dom';
 
 import Image3Image from '../assets/images/Download_image_3.png';
 
@@ -181,7 +182,6 @@ const Vector3 = styled('img')({
 });
 
 const Group7 = styled('div')({
-  boxShadow: `0px 4px 4px rgba(0, 0, 0, 0.1)`,
   display: `flex`,
   position: `absolute`,
   isolation: `isolate`,
@@ -196,7 +196,7 @@ const Group7 = styled('div')({
   top: `238px`,
 });
 
-const Group8 = styled('div')({
+const Group8 = styled('a')({
   display: `flex`,
   position: `absolute`,
   isolation: `isolate`,
@@ -209,16 +209,12 @@ const Group8 = styled('div')({
   height: `118px`,
   left: `0px`,
   top: `0px`,
-});
-
-const Rectangle9 = styled('div')({
-  background: `linear-gradient(180deg, rgba(110, 152, 234, 1) -3.0616171314629196e-15%, rgba(34, 59, 106, 1) 99.99999999999999%)`,
   borderRadius: `20px`,
-  width: `493px`,
-  height: `118px`,
-  position: `absolute`,
-  left: `0px`,
-  top: `0px`,
+  cursor: `pointer`,
+  background: `linear-gradient(180deg, rgba(110, 152, 234, 1) -3.0616171314629196e-15%, rgba(34, 59, 106, 1) 99.99999999999999%)`,
+  '&:hover': {
+    background: `linear-gradient(0deg, rgba(110, 152, 234, 1) -3.0616171314629196e-15%, rgba(34, 59, 106, 1) 99.99999999999999%)`,
+  },
 });
 
 const TIChoWindows32Bits64Span1 = styled('span')({
@@ -364,51 +360,54 @@ const LUÝSitdePkYêuCUCNCóM = styled('div')({
   top: `504px`,
 });
 
-export default function Download() {
+export default function Download({ position }) {
+  var downloadPath =
+    'https://firebasestorage.googleapis.com/v0/b/sitde-pk-web.appspot.com/o/SITDE%20PK%203.0.zip?alt=media&token=9ee5f90a-bc8e-45db-a63b-8144c689cc82';
   return (
-    <Download1>
-      <Image3 src={Image3Image} loading="lazy" alt={'image 3'} />
-      <Download2>{`DOWNLOAD`}</Download2>
-      <Group5>
-        <SitdePk11 src={SitdePk11Image} loading="lazy" alt={'SITDE PK (1) 1'} />
-        <SitdePk31 src={SitdePk31Image} loading="lazy" alt={'SITDE PK (3) 1'} />
-      </Group5>
-      <Group6>
-        <Rectangle7></Rectangle7>
-        <IconsaxLinearSetting>
-          <Vector src={VectorImage} loading="lazy" alt={'Vector'} />
-          <Vector1 src={Vector1Image} loading="lazy" alt={'Vector'} />
-        </IconsaxLinearSetting>
-        <IconsaxLinearWarning>
-          <Vector2 src={Vector2Image} loading="lazy" alt={'Vector'} />
-          <Vector3 src={Vector3Image} loading="lazy" alt={'Vector'} />
-        </IconsaxLinearWarning>
-      </Group6>
-      <Group7>
-        <Group8>
-          <Rectangle9></Rectangle9>
-          <TIChoWindows32Bits64>
-            <TIChoWindows32Bits64Span1>{`Tải cho Windows 
+    <div ref={position}>
+      <Download1>
+        <Image3 src={Image3Image} loading="lazy" alt={'image 3'} />
+        <Download2>{`DOWNLOAD`}</Download2>
+        <Group5>
+          <SitdePk11 src={SitdePk11Image} loading="lazy" />
+          <SitdePk31 src={SitdePk31Image} loading="lazy" />
+        </Group5>
+        <Group6>
+          <Rectangle7></Rectangle7>
+          <IconsaxLinearSetting>
+            <Vector src={VectorImage} loading="lazy" alt={'Vector'} />
+            <Vector1 src={Vector1Image} loading="lazy" alt={'Vector'} />
+          </IconsaxLinearSetting>
+          <IconsaxLinearWarning>
+            <Vector2 src={Vector2Image} loading="lazy" alt={'Vector'} />
+            <Vector3 src={Vector3Image} loading="lazy" alt={'Vector'} />
+          </IconsaxLinearWarning>
+        </Group6>
+        <Group7>
+          <Group8 href={downloadPath} target="_blank">
+            <TIChoWindows32Bits64>
+              <TIChoWindows32Bits64Span1>{`Tải cho Windows 
 `}</TIChoWindows32Bits64Span1>
-            <TIChoWindows32Bits64Span2>{`(32 bits/64 bits)`}</TIChoWindows32Bits64Span2>
-          </TIChoWindows32Bits64>
-          <Image4 src={Image4Image} loading="lazy" alt={'image 4'} />
-        </Group8>
-      </Group7>
-      <YêuCUCUHìnhWindows78>
-        <YêuCUCUHìnhWindows78Span1>{`Yêu cầu cấu hình:
+              <TIChoWindows32Bits64Span2>{`(32 bits/64 bits)`}</TIChoWindows32Bits64Span2>
+            </TIChoWindows32Bits64>
+            <Image4 src={Image4Image} loading="lazy" alt={'image 4'} />
+          </Group8>
+        </Group7>
+        <YêuCUCUHìnhWindows78>
+          <YêuCUCUHìnhWindows78Span1>{`Yêu cầu cấu hình:
 `}</YêuCUCUHìnhWindows78Span1>
-        <YêuCUCUHìnhWindows78Span2>{`Windows 7/8/10/11
+          <YêuCUCUHìnhWindows78Span2>{`Windows 7/8/10/11
 RAM 1 GB trở lên
 `}</YêuCUCUHìnhWindows78Span2>
-      </YêuCUCUHìnhWindows78>
-      <LUÝSitdePkYêuCUCNCóM>
-        <LUÝSitdePkYêuCUCNCóMSpan1>{`Lưu ý:
+        </YêuCUCUHìnhWindows78>
+        <LUÝSitdePkYêuCUCNCóM>
+          <LUÝSitdePkYêuCUCNCóMSpan1>{`Lưu ý:
 `}</LUÝSitdePkYêuCUCNCóMSpan1>
-        <LUÝSitdePkYêuCUCNCóMSpan2>{`SITDE PK yêu cầu cần có môi trường .NET để chạy. Nếu máy bạn chưa có môi trường .NET, trình cài đặt của SITDE PK sẽ tự động cài đặt cho bạn.
+          <LUÝSitdePkYêuCUCNCóMSpan2>{`SITDE PK yêu cầu cần có môi trường .NET để chạy. Nếu máy bạn chưa có môi trường .NET, trình cài đặt của SITDE PK sẽ tự động cài đặt cho bạn.
 Khi cài đặt nên tắt toàn bộ các phần mềm diệt virus, kể cả Windows Defender
 `}</LUÝSitdePkYêuCUCNCóMSpan2>
-      </LUÝSitdePkYêuCUCNCóM>
-    </Download1>
+        </LUÝSitdePkYêuCUCNCóM>
+      </Download1>
+    </div>
   );
 }

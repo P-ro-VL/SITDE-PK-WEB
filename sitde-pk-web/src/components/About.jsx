@@ -135,7 +135,7 @@ const SitdePkLàDÁnCôngNghP = styled('div')({
   top: `181px`,
 });
 
-const Group4 = styled('div')({
+const Group4 = styled('a')({
   display: `flex`,
   position: `absolute`,
   isolation: `isolate`,
@@ -148,6 +148,7 @@ const Group4 = styled('div')({
   height: `48px`,
   left: `902px`,
   top: `692px`,
+  borderRadius: `20px`,
 });
 
 const Rectangle6 = styled('div')({
@@ -199,36 +200,43 @@ const Vector = styled('img')({
   top: `7px`,
 });
 
-const Rectangle10 = styled('div')({
-  backgroundColor: `rgba(217, 217, 217, 1)`,
-  width: `534px`,
-  height: `292px`,
-  position: `absolute`,
-  left: `57px`,
-  top: `268px`,
-});
-
-export default function About() {
+export default function About({ position }) {
   return (
-    <About1>
-      <About2>{`ABOUT`}</About2>
-      <SitdePkLàDÁnCôngNghP>
-        <SitdePkLàDÁnCôngNghPSpan1>{`SITDE PK`}</SitdePkLàDÁnCôngNghPSpan1>
-        <SitdePkLàDÁnCôngNghPSpan2>{` là dự án công nghệ phát triển bởi sinh viên `}</SitdePkLàDÁnCôngNghPSpan2>
-        <SitdePkLàDÁnCôngNghPSpan3>{`Viện Công nghệ thông tin và Kinh tế số (SITDE)`}</SitdePkLàDÁnCôngNghPSpan3>
-        <SitdePkLàDÁnCôngNghPSpan4>{`, trường Đại học Kinh tế Quốc dân. Dự án được bắt đầu vào ngày 22/12/2022. Xuất phát từ vấn đề khó khăn khi thiếu đi nguồn tài liệu để ôn tập và tự luyện dưới dạng trắc nghiệm của sinh viên khóa 64`}</SitdePkLàDÁnCôngNghPSpan4>
-        <SitdePkLàDÁnCôngNghPSpan5>{` (khóa đầu tiên chuyển sang hình thức thi trắc nghiệm 100%, trong khi các khóa trước đó hầu hết là thi tự luận)`}</SitdePkLàDÁnCôngNghPSpan5>
-        <SitdePkLàDÁnCôngNghPSpan6>{`, SITDE PK ra đời với mong muốn sẽ là địa điểm học tập và ôn luyện tin cậy của các bạn sinh viên trường Đại học Kinh tế Quốc dân, nhất là đối với các bạn sinh viên thuộc Viện Công nghệ thông tin và Kinh tế số.
+    <div ref={position}>
+      <About1>
+        <About2>{`ABOUT`}</About2>
+        <SitdePkLàDÁnCôngNghP>
+          <SitdePkLàDÁnCôngNghPSpan1>{`SITDE PK`}</SitdePkLàDÁnCôngNghPSpan1>
+          <SitdePkLàDÁnCôngNghPSpan2>{` là dự án công nghệ phát triển bởi sinh viên `}</SitdePkLàDÁnCôngNghPSpan2>
+          <SitdePkLàDÁnCôngNghPSpan3>{`Viện Công nghệ thông tin và Kinh tế số (SITDE)`}</SitdePkLàDÁnCôngNghPSpan3>
+          <SitdePkLàDÁnCôngNghPSpan4>{`, trường Đại học Kinh tế Quốc dân. Dự án được bắt đầu vào ngày 22/12/2022. Xuất phát từ vấn đề khó khăn khi thiếu đi nguồn tài liệu để ôn tập và tự luyện dưới dạng trắc nghiệm của sinh viên khóa 64`}</SitdePkLàDÁnCôngNghPSpan4>
+          <SitdePkLàDÁnCôngNghPSpan5>{` (khóa đầu tiên chuyển sang hình thức thi trắc nghiệm 100%, trong khi các khóa trước đó hầu hết là thi tự luận)`}</SitdePkLàDÁnCôngNghPSpan5>
+          <SitdePkLàDÁnCôngNghPSpan6>{`, SITDE PK ra đời với mong muốn sẽ là địa điểm học tập và ôn luyện tin cậy của các bạn sinh viên trường Đại học Kinh tế Quốc dân, nhất là đối với các bạn sinh viên thuộc Viện Công nghệ thông tin và Kinh tế số.
 Hy vọng rằng, trong tương lai, SITDE PK sẽ tiếp tục phát triển hơn nữa, mở rộng thêm ra nhiều các học phần của các ngành, khoa/viện khác để trở thành nơi ôn luyện tin cậy không chỉ của sinh viên SITDE mà còn của tất cả các sinh viên NEU.`}</SitdePkLàDÁnCôngNghPSpan6>
-      </SitdePkLàDÁnCôngNghP>
-      <Group4>
-        <Rectangle6></Rectangle6>
-        <Frame2>
-          <TìmHiUThêm>{`Tìm hiểu thêm`}</TìmHiUThêm>
-          <Vector src={VectorImage} loading="lazy" alt={'Vector'} />
-        </Frame2>
-      </Group4>
-      <Rectangle10></Rectangle10>
-    </About1>
+        </SitdePkLàDÁnCôngNghP>
+        <Group4 href="https://fb.com/sitdepk" target="_blank">
+          <Rectangle6></Rectangle6>
+          <Frame2>
+            <TìmHiUThêm>{`Tìm hiểu thêm`}</TìmHiUThêm>
+            <Vector src={VectorImage} loading="lazy" alt={'Vector'} />
+          </Frame2>
+        </Group4>
+        <iframe
+          style={{
+            width: `534px`,
+            height: `292px`,
+            position: `absolute`,
+            left: `57px`,
+            top: `268px`,
+          }}
+          width="534"
+          height="292"
+          src="https://www.youtube.com/embed/EL_R5ZXu6VA"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          allowfullscreen
+        ></iframe>
+      </About1>
+    </div>
   );
 }

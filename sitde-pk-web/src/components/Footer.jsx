@@ -1,17 +1,12 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 import Ellipse1Image from '../assets/images/Footer_Ellipse_1.png';
-
 import Ellipse11Image from '../assets/images/Footer_Ellipse_1.png';
-
 import VectorImage from '../assets/images/Footer_Vector.png';
-
 import Vector1Image from '../assets/images/Footer_Vector.png';
-
 import Image5Image from '../assets/images/Footer_image_5.png';
-
 import LogoWhite1Image from '../assets/images/Footer_logo_white_1.png';
-
 import Rectangle15Image from '../assets/images/Footer_Rectangle_15.png';
 
 import { styled } from '@mui/material/styles';
@@ -75,7 +70,7 @@ const SitdePk = styled('div')({
   textTransform: 'none',
   position: 'absolute',
   left: '0px',
-  top: '0px',
+  top: '-3px',
 });
 
 const Rectangle4 = styled('div')({
@@ -111,7 +106,7 @@ const Q30 = styled('div')({
   textTransform: 'none',
   position: 'absolute',
   left: '228px',
-  top: '9px',
+  top: '7px',
 });
 
 const Group11 = styled('div')({
@@ -183,7 +178,7 @@ const LiênHê = styled('div')({
   textAlign: 'left',
   whiteSpace: 'pre-wrap',
   fontSynthesis: 'none',
-  color: 'rgba(187, 187, 187, 1)',
+  color: 'rgba(255, 255, 255, 1)',
   fontStyle: 'normal',
   fontFamily: 'LCK Title',
   fontWeight: '400',
@@ -223,7 +218,7 @@ const ÔiTác = styled('div')({
   textAlign: 'left',
   whiteSpace: 'pre-wrap',
   fontSynthesis: 'none',
-  color: 'rgba(187, 187, 187, 1)',
+  color: 'rgba(255, 255, 255, 1)',
   fontStyle: 'normal',
   fontFamily: 'LCK Title',
   fontWeight: '400',
@@ -539,9 +534,9 @@ const Q2 = styled('div')({
   top: '50px',
 });
 
-export default function Footer() {
+export default function Footer({ position }) {
   return (
-    <>
+    <div ref={position}>
       <Footer1>
         <Group12>
           <Group10>
@@ -568,10 +563,12 @@ export default function Footer() {
         </Group18>
         <Group17>
           <Group16>
-            <FacebookComSitdepk>{'facebook.com/sitdepk'}</FacebookComSitdepk>
-            <IconsaxBoldFacebook>
-              <Vector src={VectorImage} loading="lazy" alt={'Vector'} />
-            </IconsaxBoldFacebook>
+            <Link to="https://fb.com/sitdepk" target="_blank">
+              <FacebookComSitdepk>{'facebook.com/sitdepk'}</FacebookComSitdepk>
+              <IconsaxBoldFacebook>
+                <Vector src={VectorImage} loading="lazy" alt={'Vector'} />
+              </IconsaxBoldFacebook>
+            </Link>
           </Group16>
           <Group15>
             <Q0787097309>{'0787 097 309'}</Q0787097309>
@@ -584,22 +581,20 @@ export default function Footer() {
             <Image5 src={Image5Image} loading="lazy" alt={'image 5'} />
           </Group14>
         </Group17>
-        <LogoWhite1 src={LogoWhite1Image} loading="lazy" alt={'logo white 1'} />
+        <Link to="https://fb.com/sitdebayquamon" target="_blank">
+          <LogoWhite1 src={LogoWhite1Image} loading="lazy" />
+        </Link>
         <CopyrightBySitdePk20>
           {'@ Copyright by SITDE PK 2023'}
         </CopyrightBySitdePk20>
-        <Rectangle15
-          src={Rectangle15Image}
-          loading="lazy"
-          alt={'Rectangle 15'}
-        />
+        <Rectangle15 src={Rectangle15Image} loading="lazy" />
         <YouCanDoIt>{'YOU CAN DO IT'}</YouCanDoIt>
         <Group19>
-          <CôLênNào>{'cô lên nào!'}</CôLênNào>
+          <CôLênNào>{'cố lên nào!'}</CôLênNào>
           <Q1 />
         </Group19>
         <Q2>{'모두 제일 좋다'}</Q2>
       </Footer1>
-    </>
+    </div>
   );
 }
