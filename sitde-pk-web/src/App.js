@@ -2,14 +2,20 @@ import { Route, Routes, useLocation } from 'react-router-dom';
 import React, { useEffect, useRef, useState } from 'react';
 import { BsFillArrowUpCircleFill } from 'react-icons/bs';
 import './App.css';
-import Navbar from './components/Navbar';
-import Mainboard from './components/Mainboard';
-import About from './components/About';
-import Download from './components/Download';
-import Features from './components/Features';
-import Footer from './components/Footer';
+import Navbar from './components/desktop/Navbar';
+import Mainboard from './components/desktop/Mainboard';
+import About from './components/desktop/About';
+import Download from './components/desktop/Download';
+import Features from './components/desktop/Features';
+import Footer from './components/desktop/Footer';
 import { styled } from '@mui/material';
-import DownloadSuccess from './components/DownloadSuccess';
+import DownloadSuccess from './components/desktop/DownloadSuccess';
+import NavbarMobile from './components/mobile/NavbarMobile';
+import MainboardMobile from './components/mobile/MainboardMobile';
+import AboutMobile from './components/mobile/AboutMobile';
+import DownloadMobile from './components/mobile/DownloadMobile';
+import FeaturesMobile from './components/mobile/FeaturesMobile';
+import FooterMobile from './components/mobile/FooterMobile';
 
 const Blank = styled('div')({
   backgroundColor: `rgba(255, 255, 255, 1)`,
@@ -200,47 +206,71 @@ export default function App() {
     };
   }, [areaRefs]);
 
+  console.log(windowSize);
+
   return (
     <div ref={topRef}>
-      {showScrollUpBtn && (
-        <BsFillArrowUpCircleFill
-          onClick={scrollToTop}
-          className="fixed right-5 bottom-5 text-3xl sm:text-4xl text-black opacity-20 active:opacity-75 lg:hover:opacity-75 cursor-pointer duration-200 z-20"
-        />
+      {windowSize.innerWidth <= 1000 ? (
+        <Routes>
+          <Route
+            path={'/*'}
+            element={
+              <>
+                <NavbarMobile />
+                <MainboardMobile />
+                <AboutMobile />
+                <DownloadMobile />
+                <FeaturesMobile />
+                <FooterMobile />
+              </>
+            }
+          />
+        </Routes>
+      ) : (
+        <>
+          {showScrollUpBtn && (
+            <BsFillArrowUpCircleFill
+              onClick={scrollToTop}
+              className="fixed right-5 bottom-5 text-3xl sm:text-4xl text-black opacity-20 active:opacity-75 lg:hover:opacity-75 cursor-pointer duration-200 z-20"
+            />
+          )}
+          <div
+            className="fixed bg-none h-1 left-0 right-0 top-44"
+            ref={pointRef}
+          />
+          <Navbar
+            scrollToAbout={scrollToAbout}
+            scrollToDownload={scrollToDownload}
+            scrollToFeatures={scrollToFeatures}
+            scrollToContact={scrollToContact}
+            highlight={showHighlight}
+            windowWidth={windowSize.innerWidth}
+          />
+          <Routes>
+            <Route
+              path={'/*'}
+              element={
+                <>
+                  <Blank />
+                  <Mainboard scrollToDownload={scrollToDownload} />
+                  <About position={areaRefs[0]} />
+                  <Download position={areaRefs[1]} />
+                  <Features position={areaRefs[2]} />
+                </>
+              }
+            />
+            <Route
+              path={'/download-success'}
+              element={
+                <>
+                  <DownloadSuccess />
+                </>
+              }
+            />
+          </Routes>
+          <Footer position={areaRefs[3]} />
+        </>
       )}
-      <div className="fixed bg-none h-1 left-0 right-0 top-44" ref={pointRef} />
-
-      <Navbar
-        scrollToAbout={scrollToAbout}
-        scrollToDownload={scrollToDownload}
-        scrollToFeatures={scrollToFeatures}
-        scrollToContact={scrollToContact}
-        highlight={showHighlight}
-        windowWidth={windowSize.innerWidth}
-      />
-      <Routes>
-        <Route
-          path={'/*'}
-          element={
-            <>
-              <Blank />
-              <Mainboard scrollToDownload={scrollToDownload} />
-              <About position={areaRefs[0]} />
-              <Download position={areaRefs[1]} />
-              <Features position={areaRefs[2]} />
-            </>
-          }
-        />
-        <Route
-          path={'/download-success'}
-          element={
-            <>
-              <DownloadSuccess />
-            </>
-          }
-        />
-      </Routes>
-      <Footer position={areaRefs[3]} />
     </div>
   );
 }

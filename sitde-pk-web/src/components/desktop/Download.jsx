@@ -1,21 +1,21 @@
 import React from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 
-import WallpaperImage from '../assets/images/Download_image_3.png';
+import WallpaperImage from '../../assets/images/desktop/Download_image_3.png';
 
-import SitdePk11Image from '../assets/images/Download_SITDE_PK__1__1.png';
+import SitdePk11Image from '../../assets/images/desktop/Download_SITDE_PK__1__1.png';
 
-import SitdePk31Image from '../assets/images/Download_SITDE_PK__3__1.png';
+import SitdePk31Image from '../../assets/images/desktop/Download_SITDE_PK__3__1.png';
 
-import VectorImage from '../assets/images/Download_Vector.png';
+import VectorImage from '../../assets/images/desktop/Download_Vector.png';
 
-import Vector1Image from '../assets/images/Download_Vector.png';
+import Vector1Image from '../../assets/images/desktop/Download_Vector.png';
 
-import Vector2Image from '../assets/images/Download_Vector.png';
+import Vector2Image from '../../assets/images/desktop/Download_Vector.png';
 
-import Vector3Image from '../assets/images/Download_Vector.png';
+import Vector3Image from '../../assets/images/desktop/Download_Vector.png';
 
-import WindowLogoImage from '../assets/images/Download_image_4.png';
+import WindowLogoImage from '../../assets/images/desktop/Download_image_4.png';
 
 import { styled } from '@mui/material/styles';
 

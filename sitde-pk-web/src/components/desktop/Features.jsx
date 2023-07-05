@@ -2,10 +2,10 @@ import React from 'react';
 
 import { styled } from '@mui/material/styles';
 
-import FeatureOne from '../assets/images/Features_1.png';
-import FeatureTwo from '../assets/images/Features_2.png';
-import FeatureThree from '../assets/images/Features_3.png';
-import FeatureFour from '../assets/images/Features_4.png';
+import FeatureOne from '../../assets/images/desktop/Features_1.png';
+import FeatureTwo from '../../assets/images/desktop/Features_2.png';
+import FeatureThree from '../../assets/images/desktop/Features_3.png';
+import FeatureFour from '../../assets/images/desktop/Features_4.png';
 
 const Base = styled('div')({
   backgroundColor: `rgba(255, 255, 255, 1)`,

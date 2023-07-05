@@ -1,10 +1,10 @@
 import React from 'react';
 
-import WallpaperImage from '../assets/images/Mainboard_wallpaper.png';
+import WallpaperImage from '../../assets/images/desktop/Mainboard_wallpaper.png';
 
-import PreviewImageImage from '../assets/images/Mainboard_sitdepk1.png';
+import PreviewImageImage from '../../assets/images/desktop/Mainboard_sitdepk1.png';
 
-import IconsaxBoldWindowsImage from '../assets/images/Mainboard_Iconsax_Bold_windows.png';
+import IconsaxBoldWindowsImage from '../../assets/images/desktop/Mainboard_Iconsax_Bold_windows.png';
 
 import { styled } from '@mui/material/styles';
 

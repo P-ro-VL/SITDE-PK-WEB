@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-import WallpaperImage from '../assets/images/DownloadSuccessBackground.png';
+import WallpaperImage from '../../assets/images/desktop/DownloadSuccessBackground.png';
 
 import { styled } from '@mui/material/styles';
 

@@ -1,6 +1,6 @@
 import React from 'react';
 
-import MoreInfoIco from '../assets/images/About_Vector.png';
+import MoreInfoIco from '../../assets/images/desktop/About_Vector.png';
 
 import { styled } from '@mui/material/styles';
 

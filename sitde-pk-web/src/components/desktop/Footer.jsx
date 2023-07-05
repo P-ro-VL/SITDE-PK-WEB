@@ -1,13 +1,13 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-import Ellipse1Image from '../assets/images/Footer_Ellipse_1.png';
-import Ellipse11Image from '../assets/images/Footer_Ellipse_1.png';
-import VectorImage from '../assets/images/Footer_Vector.png';
-import Vector1Image from '../assets/images/Footer_Vector.png';
-import Image5Image from '../assets/images/Footer_image_5.png';
-import SitdebayquamonLogoImage from '../assets/images/Footer_logo_white_1.png';
-import MottoBackgroundImage from '../assets/images/Footer_Rectangle_15.png';
+import Ellipse1Image from '../../assets/images/desktop/Footer_Ellipse_1.png';
+import Ellipse11Image from '../../assets/images/desktop/Footer_Ellipse_1.png';
+import VectorImage from '../../assets/images/desktop/Footer_Vector.png';
+import Vector1Image from '../../assets/images/desktop/Footer_Vector.png';
+import Image5Image from '../../assets/images/desktop/Footer_image_5.png';
+import SitdebayquamonLogoImage from '../../assets/images/desktop/Footer_logo_white_1.png';
+import MottoBackgroundImage from '../../assets/images/desktop/Footer_Rectangle_15.png';
 
 import { styled } from '@mui/material/styles';
 
