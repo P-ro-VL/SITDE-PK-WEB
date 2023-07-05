@@ -2,13 +2,13 @@ import React from 'react';
 
 import WallpaperImage from '../assets/images/Mainboard_wallpaper.png';
 
-import Sitdepk1Image from '../assets/images/Mainboard_sitdepk1.png';
+import PreviewImageImage from '../assets/images/Mainboard_sitdepk1.png';
 
 import IconsaxBoldWindowsImage from '../assets/images/Mainboard_Iconsax_Bold_windows.png';
 
 import { styled } from '@mui/material/styles';
 
-const Mainboard1 = styled('div')({
+const Base = styled('div')({
   backgroundColor: `rgba(255, 255, 255, 1)`,
   display: `flex`,
   position: `relative`,
@@ -33,7 +33,7 @@ const Wallpaper = styled('img')({
   top: `-4px`,
 });
 
-const Group2 = styled('div')({
+const NameGroup = styled('div')({
   display: `flex`,
   position: `absolute`,
   isolation: `isolate`,
@@ -48,7 +48,7 @@ const Group2 = styled('div')({
   top: `225px`,
 });
 
-const SitdePk = styled('div')({
+const Name = styled('div')({
   textAlign: `left`,
   whiteSpace: `pre-wrap`,
   fontSynthesis: `none`,
@@ -65,7 +65,7 @@ const SitdePk = styled('div')({
   top: `0px`,
 });
 
-const IChiNThiLYNgayA = styled('div')({
+const NameDesc = styled('div')({
   textAlign: `left`,
   whiteSpace: `pre-wrap`,
   fontSynthesis: `none`,
@@ -82,7 +82,7 @@ const IChiNThiLYNgayA = styled('div')({
   top: `99px`,
 });
 
-const Group1 = styled('div')({
+const SideImageGroup = styled('div')({
   boxShadow: `-4px 4px 4px rgba(0, 0, 0, 0.1)`,
   display: `flex`,
   position: `absolute`,
@@ -98,7 +98,7 @@ const Group1 = styled('div')({
   top: `111px`,
 });
 
-const Rectangle1 = styled('div')({
+const Rectangle = styled('div')({
   backgroundColor: `rgba(239, 239, 239, 1)`,
   border: `1px solid rgba(208, 208, 208, 0.3)`,
   boxSizing: `border-box`,
@@ -110,7 +110,7 @@ const Rectangle1 = styled('div')({
   top: `0px`,
 });
 
-const Sitdepk1 = styled('img')({
+const PreviewImage = styled('img')({
   height: `643.39px`,
   width: `1015.21px`,
   objectFit: `cover`,
@@ -120,7 +120,7 @@ const Sitdepk1 = styled('img')({
   top: `17px`,
 });
 
-const Group3 = styled('div')({
+const DownloadButtonGroup = styled('div')({
   display: `flex`,
   position: `absolute`,
   isolation: `isolate`,
@@ -142,7 +142,7 @@ const Group3 = styled('div')({
   },
 });
 
-const Rectangle2 = styled('div')({
+const DownloadButtonBorder = styled('div')({
   backgroundColor: `rgba(50, 76, 129, 0)`,
   border: `3px solid rgba(255, 255, 255, 1)`,
   boxSizing: `border-box`,
@@ -164,7 +164,7 @@ const IconsaxBoldWindows = styled('img')({
   top: `14px`,
 });
 
-const TIXuNgChoWindows = styled('div')({
+const DownloadButtonContent = styled('div')({
   textAlign: `left`,
   whiteSpace: `pre-wrap`,
   fontSynthesis: `none`,
@@ -180,7 +180,7 @@ const TIXuNgChoWindows = styled('div')({
   top: `18px`,
 });
 
-const PhNMMHTrSinhViênÔnTP = styled('div')({
+const Description = styled('div')({
   textAlign: `justified`,
   whiteSpace: `pre-wrap`,
   fontSynthesis: `none`,
@@ -200,31 +200,34 @@ const PhNMMHTrSinhViênÔnTP = styled('div')({
 
 function Mainboard({ scrollToDownload }) {
   return (
-    <Mainboard1>
-      <Wallpaper src={WallpaperImage} loading="lazy" alt={'wallpaper'} />
-      <Group2>
-        <SitdePk>{`SITDE PK`}</SitdePk>
-        <IChiNThiLYNgayA>{`ĐẠI CHIẾN ĐỀ THI - LẤY NGAY A+`}</IChiNThiLYNgayA>
-      </Group2>
-      <Group1>
-        <Rectangle1></Rectangle1>
-        <Sitdepk1 src={Sitdepk1Image} loading="lazy" alt={'sitdepk1'} />
-      </Group1>
-      <Group3
+    <Base>
+      <Wallpaper src={WallpaperImage} loading="lazy" />
+      <NameGroup>
+        <Name>{`SITDE PK`}</Name>
+        <NameDesc>{`ĐẠI CHIẾN ĐỀ THI - LẤY NGAY A+`}</NameDesc>
+      </NameGroup>
+
+      <SideImageGroup>
+        <Rectangle></Rectangle>
+        <PreviewImage src={PreviewImageImage} loading="lazy" />
+      </SideImageGroup>
+
+      <DownloadButtonGroup
         onClick={() => {
           setTimeout(() => {
             scrollToDownload();
           }, 100);
         }}
       >
-        <Rectangle2></Rectangle2>
+        <DownloadButtonBorder></DownloadButtonBorder>
         <IconsaxBoldWindows src={IconsaxBoldWindowsImage} loading="lazy" />
-        <TIXuNgChoWindows>{`Tải xuống cho Windows`}</TIXuNgChoWindows>
-      </Group3>
-      <PhNMMHTrSinhViênÔnTP>
+        <DownloadButtonContent>{`Tải xuống cho Windows`}</DownloadButtonContent>
+      </DownloadButtonGroup>
+
+      <Description>
         {`Phần mềm hỗ trợ sinh viên ôn tập kiến thức dưới hình thức trắc nghiệm, phát triển bởi sinh viên Viện Công nghệ thông tin và Kinh tế số, trường Đại học Kinh tế Quốc dân.`}
-      </PhNMMHTrSinhViênÔnTP>
-    </Mainboard1>
+      </Description>
+    </Base>
   );
 }
 

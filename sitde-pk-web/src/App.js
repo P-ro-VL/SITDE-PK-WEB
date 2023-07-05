@@ -9,6 +9,7 @@ import Download from './components/Download';
 import Features from './components/Features';
 import Footer from './components/Footer';
 import { styled } from '@mui/material';
+import DownloadSuccess from './components/DownloadSuccess';
 
 const Blank = styled('div')({
   backgroundColor: `rgba(255, 255, 255, 1)`,
@@ -219,7 +220,7 @@ export default function App() {
       />
       <Routes>
         <Route
-          path="/*"
+          path={'/*'}
           element={
             <>
               <Blank />
@@ -227,11 +228,19 @@ export default function App() {
               <About position={areaRefs[0]} />
               <Download position={areaRefs[1]} />
               <Features position={areaRefs[2]} />
-              <Footer position={areaRefs[3]} />
+            </>
+          }
+        />
+        <Route
+          path={'/download-success'}
+          element={
+            <>
+              <DownloadSuccess />
             </>
           }
         />
       </Routes>
+      <Footer position={areaRefs[3]} />
     </div>
   );
 }

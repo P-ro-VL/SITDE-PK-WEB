@@ -7,7 +7,7 @@ import FeatureTwo from '../assets/images/Features_2.png';
 import FeatureThree from '../assets/images/Features_3.png';
 import FeatureFour from '../assets/images/Features_4.png';
 
-const Features1 = styled('div')({
+const Base = styled('div')({
   backgroundColor: `rgba(255, 255, 255, 1)`,
   display: `flex`,
   position: `relative`,
@@ -22,7 +22,7 @@ const Features1 = styled('div')({
   overflow: `hidden`,
 });
 
-const Features2 = styled('div')({
+const FeaturesTitle = styled('div')({
   textAlign: `left`,
   whiteSpace: `pre-wrap`,
   fontSynthesis: `none`,
@@ -39,7 +39,7 @@ const Features2 = styled('div')({
   top: `89px`,
 });
 
-const Group9 = styled('div')({
+const Group = styled('div')({
   display: `flex`,
   position: `relative`,
   isolation: `isolate`,
@@ -56,7 +56,7 @@ const Group9 = styled('div')({
   top: `220px`,
 });
 
-const Rectangle11 = styled('img')({
+const FeatureOneImg = styled('img')({
   width: `262px`,
   height: `262px`,
   position: `absolute`,
@@ -65,7 +65,7 @@ const Rectangle11 = styled('img')({
   top: `0px`,
 });
 
-const Rectangle12 = styled('img')({
+const FeatureTwoImg = styled('img')({
   width: `262px`,
   height: `262px`,
   position: `absolute`,
@@ -74,7 +74,7 @@ const Rectangle12 = styled('img')({
   top: `329px`,
 });
 
-const Rectangle13 = styled('img')({
+const FeatureThreeImg = styled('img')({
   width: `262px`,
   height: `262px`,
   position: `absolute`,
@@ -83,7 +83,7 @@ const Rectangle13 = styled('img')({
   top: `0px`,
 });
 
-const Rectangle14 = styled('img')({
+const FeatureFourImg = styled('img')({
   width: `262px`,
   height: `262px`,
   position: `absolute`,
@@ -92,7 +92,7 @@ const Rectangle14 = styled('img')({
   top: `329px`,
 });
 
-const BàiTPTheoChNgThASCÔnSpan1 = styled('span')({
+const FeaturesOneContentSpan1 = styled('span')({
   whiteSpace: `pre-wrap`,
   color: `rgba(0, 0, 0, 1)`,
   fontStyle: `normal`,
@@ -104,7 +104,7 @@ const BàiTPTheoChNgThASCÔnSpan1 = styled('span')({
   textTransform: `none`,
 });
 
-const BàiTPTheoChNgThASCÔnSpan3 = styled('span')({
+const FeaturesOneContentSpan3 = styled('span')({
   whiteSpace: `pre-wrap`,
   color: `rgba(0, 0, 0, 1)`,
   fontStyle: `normal`,
@@ -116,7 +116,7 @@ const BàiTPTheoChNgThASCÔnSpan3 = styled('span')({
   textTransform: `none`,
 });
 
-const BàiTPTheoChNgThASCÔn = styled('div')({
+const FeaturesOneContent = styled('div')({
   textAlign: `justified`,
   whiteSpace: `pre-wrap`,
   fontSynthesis: `none`,
@@ -135,7 +135,7 @@ const BàiTPTheoChNgThASCÔn = styled('div')({
   top: `7px`,
 });
 
-const ThiThNhThiThTGNNCácKSpan1 = styled('span')({
+const FeaturesTwoContentSpan1 = styled('span')({
   whiteSpace: `pre-wrap`,
   color: `rgba(0, 0, 0, 1)`,
   fontStyle: `normal`,
@@ -147,7 +147,7 @@ const ThiThNhThiThTGNNCácKSpan1 = styled('span')({
   textTransform: `none`,
 });
 
-const ThiThNhThiThTGNNCácKSpan3 = styled('span')({
+const FeaturesTwoContentSpan3 = styled('span')({
   whiteSpace: `pre-wrap`,
   color: `rgba(0, 0, 0, 1)`,
   fontStyle: `normal`,
@@ -159,7 +159,7 @@ const ThiThNhThiThTGNNCácKSpan3 = styled('span')({
   textTransform: `none`,
 });
 
-const ThiThNhThiThTGNNCácK = styled('div')({
+const FeaturesTwoContent = styled('div')({
   textAlign: `justified`,
   whiteSpace: `pre-wrap`,
   fontSynthesis: `none`,
@@ -178,7 +178,7 @@ const ThiThNhThiThTGNNCácK = styled('div')({
   top: `336px`,
 });
 
-const VàVôSTínhNNgThúVKhácSpan1 = styled('span')({
+const FeaturesFourContentSpan1 = styled('span')({
   whiteSpace: `pre-wrap`,
   color: `rgba(0, 0, 0, 1)`,
   fontStyle: `normal`,
@@ -190,7 +190,7 @@ const VàVôSTínhNNgThúVKhácSpan1 = styled('span')({
   textTransform: `none`,
 });
 
-const VàVôSTínhNNgThúVKhácSpan3 = styled('span')({
+const FeaturesFourContentSpan3 = styled('span')({
   whiteSpace: `pre-wrap`,
   color: `rgba(0, 0, 0, 1)`,
   fontStyle: `normal`,
@@ -202,7 +202,7 @@ const VàVôSTínhNNgThúVKhácSpan3 = styled('span')({
   textTransform: `none`,
 });
 
-const VàVôSTínhNNgThúVKhác = styled('div')({
+const FeaturesFourContent = styled('div')({
   textAlign: `justified`,
   whiteSpace: `pre-wrap`,
   fontSynthesis: `none`,
@@ -221,7 +221,7 @@ const VàVôSTínhNNgThúVKhác = styled('div')({
   top: `329px`,
 });
 
-const CNgTómTTBCNgTómTTKiNSpan1 = styled('span')({
+const FeaturesThreeContentSpan1 = styled('span')({
   whiteSpace: `pre-wrap`,
   color: `rgba(0, 0, 0, 1)`,
   fontStyle: `normal`,
@@ -233,7 +233,7 @@ const CNgTómTTBCNgTómTTKiNSpan1 = styled('span')({
   textTransform: `none`,
 });
 
-const CNgTómTTBCNgTómTTKiNSpan3 = styled('span')({
+const FeaturesThreeContentSpan3 = styled('span')({
   whiteSpace: `pre-wrap`,
   color: `rgba(0, 0, 0, 1)`,
   fontStyle: `normal`,
@@ -245,7 +245,7 @@ const CNgTómTTBCNgTómTTKiNSpan3 = styled('span')({
   textTransform: `none`,
 });
 
-const CNgTómTTBCNgTómTTKiN = styled('div')({
+const FeaturesThreeContent = styled('div')({
   textAlign: `justified`,
   whiteSpace: `pre-wrap`,
   fontSynthesis: `none`,
@@ -267,41 +267,41 @@ const CNgTómTTBCNgTómTTKiN = styled('div')({
 export default function Features({ position }) {
   return (
     <div ref={position}>
-      <Features1>
+      <Base>
         <div
           style={{ width: '100%' }}
           className="flex justify-center items-center"
         >
-          <Features2>{`FEATURES`}</Features2>
-          <Group9>
-            <Rectangle11 src={FeatureOne} loading="lazy" />
-            <Rectangle12 src={FeatureTwo} loading="lazy" />
-            <Rectangle13 src={FeatureThree} loading="lazy" />
-            <Rectangle14 src={FeatureFour} loading="lazy" />
-            <BàiTPTheoChNgThASCÔn>
-              <BàiTPTheoChNgThASCÔnSpan1>{`BÀI TẬP THEO CHƯƠNG
-`}</BàiTPTheoChNgThASCÔnSpan1>
-              <BàiTPTheoChNgThASCÔnSpan3>{`Thỏa sức ôn luyện cùng với các học phần có sẵn trên SITDE PK. Bài ôn luyện được chia theo chương, sát với chương trình học của trường. Dễ dàng cho các bạn sinh viên ôn tập, nắm bắt được phần kiến thức còn yếu, hổng.`}</BàiTPTheoChNgThASCÔnSpan3>
-            </BàiTPTheoChNgThASCÔn>
-            <ThiThNhThiThTGNNCácK>
-              <ThiThNhThiThTGNNCácKSpan1>{`THI THỬ NHƯ THI THẬT
-`}</ThiThNhThiThTGNNCácKSpan1>
-              <ThiThNhThiThTGNNCácKSpan3>{`Gần đến các kỳ thi, SITDE PK sẽ mở các bài thi thử có thời gian mở cố định và không thể vào muộn quá 15 phút.
-Giao diện thi thử giống của trường mang lại cảm giác “thi thử như thi thật”, giúp sinh viên rèn luyện sự tự tin và bản lĩnh phòng thi.`}</ThiThNhThiThTGNNCácKSpan3>
-            </ThiThNhThiThTGNNCácK>
-            <VàVôSTínhNNgThúVKhác>
-              <VàVôSTínhNNgThúVKhácSpan1>{`VÀ VÔ SỐ TÍNH NĂNG THÚ VỊ KHÁC ....
-`}</VàVôSTínhNNgThúVKhácSpan1>
-              <VàVôSTínhNNgThúVKhácSpan3>{`Bên cạnh đó SITDE PK còn vô số tính năng thú vị khác như bói bài tarot, bấm giờ khoa học, ... đều sẽ là những trợ thủ đắc lực trong quá trình ôn luyện của các bạn sinh viên.`}</VàVôSTínhNNgThúVKhácSpan3>
-            </VàVôSTínhNNgThúVKhác>
-            <CNgTómTTBCNgTómTTKiN>
-              <CNgTómTTBCNgTómTTKiNSpan1>{`ĐỀ CƯƠNG TÓM TẮT
-`}</CNgTómTTBCNgTómTTKiNSpan1>
-              <CNgTómTTBCNgTómTTKiNSpan3>{`Bộ đề cương tóm tắt kiến thức siêu trọng tâm được biên soạn rất chi tiết từ Sitdebayquamon chắc chắn sẽ là cơ hội để các bạn sinh viên “lấy lại gốc” và rà soát kiến thức một cách nhanh chóng.`}</CNgTómTTBCNgTómTTKiNSpan3>
-            </CNgTómTTBCNgTómTTKiN>
-          </Group9>
+          <FeaturesTitle>{`FEATURES`}</FeaturesTitle>
+          <Group>
+            <FeatureOneImg src={FeatureOne} loading="lazy" />
+            <FeatureTwoImg src={FeatureTwo} loading="lazy" />
+            <FeatureThreeImg src={FeatureThree} loading="lazy" />
+            <FeatureFourImg src={FeatureFour} loading="lazy" />
+            <FeaturesOneContent>
+              <FeaturesOneContentSpan1>{`BÀI TẬP THEO CHƯƠNG
+`}</FeaturesOneContentSpan1>
+              <FeaturesOneContentSpan3>{`Thỏa sức ôn luyện cùng với các học phần có sẵn trên SITDE PK. Bài ôn luyện được chia theo chương, sát với chương trình học của trường. Dễ dàng cho các bạn sinh viên ôn tập, nắm bắt được phần kiến thức còn yếu, hổng.`}</FeaturesOneContentSpan3>
+            </FeaturesOneContent>
+            <FeaturesTwoContent>
+              <FeaturesTwoContentSpan1>{`THI THỬ NHƯ THI THẬT
+`}</FeaturesTwoContentSpan1>
+              <FeaturesTwoContentSpan3>{`Gần đến các kỳ thi, SITDE PK sẽ mở các bài thi thử có thời gian mở cố định và không thể vào muộn quá 15 phút.
+Giao diện thi thử giống của trường mang lại cảm giác “thi thử như thi thật”, giúp sinh viên rèn luyện sự tự tin và bản lĩnh phòng thi.`}</FeaturesTwoContentSpan3>
+            </FeaturesTwoContent>
+            <FeaturesThreeContent>
+              <FeaturesThreeContentSpan1>{`ĐỀ CƯƠNG TÓM TẮT
+`}</FeaturesThreeContentSpan1>
+              <FeaturesThreeContentSpan3>{`Bộ đề cương tóm tắt kiến thức siêu trọng tâm được biên soạn rất chi tiết từ Sitdebayquamon chắc chắn sẽ là cơ hội để các bạn sinh viên “lấy lại gốc” và rà soát kiến thức một cách nhanh chóng.`}</FeaturesThreeContentSpan3>
+            </FeaturesThreeContent>
+            <FeaturesFourContent>
+              <FeaturesFourContentSpan1>{`VÀ VÔ SỐ TÍNH NĂNG THÚ VỊ KHÁC ....
+`}</FeaturesFourContentSpan1>
+              <FeaturesFourContentSpan3>{`Bên cạnh đó SITDE PK còn vô số tính năng thú vị khác như bói bài tarot, bấm giờ khoa học, ... đều sẽ là những trợ thủ đắc lực trong quá trình ôn luyện của các bạn sinh viên.`}</FeaturesFourContentSpan3>
+            </FeaturesFourContent>
+          </Group>
         </div>
-      </Features1>
+      </Base>
     </div>
   );
 }

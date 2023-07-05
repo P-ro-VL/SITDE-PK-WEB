@@ -1,9 +1,9 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 
 import { styled } from '@mui/material/styles';
 
-const NavbarDefault1 = styled('div')({
+const Base = styled('div')({
   backgroundColor: `rgba(255, 255, 255, 1)`,
   display: `flex`,
   position: `fixed`,
@@ -28,7 +28,7 @@ const Rectangle3 = styled('div')({
   top: `0px`,
 });
 
-const SitdePk = styled('div')({
+const Name = styled('div')({
   textAlign: `left`,
   whiteSpace: `pre-wrap`,
   fontSynthesis: `none`,
@@ -45,7 +45,7 @@ const SitdePk = styled('div')({
   top: `30px`,
 });
 
-const Rectangle4 = styled('div')({
+const Separator = styled('div')({
   backgroundColor: `rgba(255, 255, 255, 1)`,
   width: `4px`,
   height: `21px`,
@@ -54,7 +54,7 @@ const Rectangle4 = styled('div')({
   top: `40px`,
 });
 
-const Rectangle5 = styled('div')({
+const VersionBase = styled('div')({
   backgroundColor: `rgba(108, 202, 255, 1)`,
   borderRadius: `3px`,
   width: `58px`,
@@ -64,7 +64,7 @@ const Rectangle5 = styled('div')({
   top: `39px`,
 });
 
-const Q30 = styled('div')({
+const Version = styled('div')({
   textAlign: `left`,
   whiteSpace: `pre-wrap`,
   fontSynthesis: `none`,
@@ -81,7 +81,7 @@ const Q30 = styled('div')({
   top: `40px`,
 });
 
-const Frame1 = styled('div')({
+const NavigationGroup = styled('div')({
   display: `flex`,
   position: `absolute`,
   isolation: `isolate`,
@@ -187,7 +187,7 @@ const SitdeBayquamon = styled('div')({
   margin: `0px 0px 0px 22px`,
   cursor: `pointer`,
   '&:hover': {
-    color: 'white',
+    color: 'rgb(108, 202, 255)',
   },
 });
 
@@ -200,16 +200,18 @@ export default function NavbarDefault({
   highlight,
   windowWidth,
 }) {
+  var navigate = useNavigate();
   return (
-    <NavbarDefault1 className="fixed">
+    <Base className="fixed">
       s<Rectangle3></Rectangle3>
-      <SitdePk>{`SITDE PK`}</SitdePk>
-      <Rectangle4></Rectangle4>
-      <Rectangle5></Rectangle5>
-      <Q30>{`3.0`}</Q30>
-      <Frame1>
+      <Name>{`SITDE PK`}</Name>
+      <Separator></Separator>
+      <VersionBase></VersionBase>
+      <Version>{`3.0`}</Version>
+      <NavigationGroup>
         <About
           onClick={() => {
+            navigate('/');
             setTimeout(() => {
               scrollToAbout();
             }, 100);
@@ -219,6 +221,7 @@ export default function NavbarDefault({
         </About>
         <Download
           onClick={() => {
+            navigate('/');
             setTimeout(() => {
               scrollToDownload();
             }, 100);
@@ -228,6 +231,7 @@ export default function NavbarDefault({
         </Download>
         <Features
           onClick={() => {
+            navigate('/');
             setTimeout(() => {
               scrollToFeatures();
             }, 100);
@@ -237,6 +241,7 @@ export default function NavbarDefault({
         </Features>
         <Contact
           onClick={() => {
+            navigate('/');
             setTimeout(() => {
               scrollToContact();
             }, 100);
@@ -244,10 +249,11 @@ export default function NavbarDefault({
         >
           {`CONTACT`}
         </Contact>
+
         <Link to="https://fb.com/sitdebayquamon" target="_blank">
           <SitdeBayquamon>{`sitdeBAYQUAMON`}</SitdeBayquamon>
         </Link>
-      </Frame1>
-    </NavbarDefault1>
+      </NavigationGroup>
+    </Base>
   );
 }

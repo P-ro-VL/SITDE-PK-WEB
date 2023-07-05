@@ -6,12 +6,12 @@ import Ellipse11Image from '../assets/images/Footer_Ellipse_1.png';
 import VectorImage from '../assets/images/Footer_Vector.png';
 import Vector1Image from '../assets/images/Footer_Vector.png';
 import Image5Image from '../assets/images/Footer_image_5.png';
-import LogoWhite1Image from '../assets/images/Footer_logo_white_1.png';
-import Rectangle15Image from '../assets/images/Footer_Rectangle_15.png';
+import SitdebayquamonLogoImage from '../assets/images/Footer_logo_white_1.png';
+import MottoBackgroundImage from '../assets/images/Footer_Rectangle_15.png';
 
 import { styled } from '@mui/material/styles';
 
-const Footer1 = styled('div')({
+const Base = styled('div')({
   backgroundColor: 'rgba(25, 25, 25, 1)',
   display: 'flex',
   position: 'relative',
@@ -26,7 +26,7 @@ const Footer1 = styled('div')({
   overflow: 'hidden',
 });
 
-const Group12 = styled('div')({
+const NameGroup = styled('div')({
   display: 'flex',
   position: 'absolute',
   isolation: 'isolate',
@@ -41,7 +41,7 @@ const Group12 = styled('div')({
   top: '72px',
 });
 
-const Group10 = styled('div')({
+const Name = styled('div')({
   display: 'flex',
   position: 'absolute',
   isolation: 'isolate',
@@ -109,7 +109,7 @@ const Q30 = styled('div')({
   top: '7px',
 });
 
-const Group11 = styled('div')({
+const NameDesc = styled('div')({
   display: 'flex',
   position: 'absolute',
   isolation: 'isolate',
@@ -124,7 +124,7 @@ const Group11 = styled('div')({
   top: '39px',
 });
 
-const AiChiNThiLYNgayA = styled('div')({
+const DescContent = styled('div')({
   textAlign: 'left',
   whiteSpace: 'pre-wrap',
   fontSynthesis: 'none',
@@ -149,7 +149,7 @@ const Ellipse1 = styled('img')({
   top: '14px',
 });
 
-const Line1 = styled('div')({
+const Separator = styled('div')({
   border: '1px solid rgba(51, 51, 51, 1)',
   width: '140px',
   height: '0px',
@@ -159,7 +159,7 @@ const Line1 = styled('div')({
   top: '100px',
 });
 
-const Group13 = styled('div')({
+const ContactTitle = styled('div')({
   display: 'flex',
   position: 'absolute',
   isolation: 'isolate',
@@ -174,7 +174,7 @@ const Group13 = styled('div')({
   top: '30px',
 });
 
-const LiênHê = styled('div')({
+const ContactContent = styled('div')({
   textAlign: 'left',
   whiteSpace: 'pre-wrap',
   fontSynthesis: 'none',
@@ -199,7 +199,7 @@ const Ellipse11 = styled('img')({
   top: '21px',
 });
 
-const Group18 = styled('div')({
+const PartnerTitle = styled('div')({
   display: 'flex',
   position: 'absolute',
   isolation: 'isolate',
@@ -214,7 +214,7 @@ const Group18 = styled('div')({
   top: '24px',
 });
 
-const ÔiTác = styled('div')({
+const PartnerContent = styled('div')({
   textAlign: 'left',
   whiteSpace: 'pre-wrap',
   fontSynthesis: 'none',
@@ -248,7 +248,7 @@ const Q = styled('div')({
   top: '24px',
 });
 
-const Group17 = styled('div')({
+const ContactGroup = styled('div')({
   display: 'flex',
   position: 'absolute',
   isolation: 'isolate',
@@ -263,7 +263,7 @@ const Group17 = styled('div')({
   top: '74px',
 });
 
-const Group16 = styled('div')({
+const Facebook = styled('div')({
   display: 'flex',
   position: 'absolute',
   isolation: 'isolate',
@@ -319,7 +319,7 @@ const Vector = styled('img')({
   top: '2px',
 });
 
-const Group15 = styled('div')({
+const Phone = styled('div')({
   display: 'flex',
   position: 'absolute',
   isolation: 'isolate',
@@ -375,7 +375,7 @@ const Vector1 = styled('img')({
   top: '2px',
 });
 
-const Group14 = styled('div')({
+const Mail = styled('div')({
   display: 'flex',
   position: 'absolute',
   isolation: 'isolate',
@@ -416,7 +416,7 @@ const Image5 = styled('img')({
   top: '0px',
 });
 
-const LogoWhite1 = styled('img')({
+const SitdebayquamonLogo = styled('img')({
   height: '80px',
   width: '140px',
   objectFit: 'cover',
@@ -425,7 +425,7 @@ const LogoWhite1 = styled('img')({
   top: '75px',
 });
 
-const CopyrightBySitdePk20 = styled('div')({
+const Copyright = styled('div')({
   textAlign: 'left',
   whiteSpace: 'pre-wrap',
   fontSynthesis: 'none',
@@ -442,16 +442,17 @@ const CopyrightBySitdePk20 = styled('div')({
   top: '170px',
 });
 
-const Rectangle15 = styled('img')({
+const MottoBackground = styled('img')({
   height: '123px',
   width: '499px',
   objectFit: 'cover',
   position: 'absolute',
+  zIndex: `20`,
   left: '1685px',
   top: '285px',
 });
 
-const YouCanDoIt = styled('div')({
+const MottoEN = styled('div')({
   textAlign: 'left',
   whiteSpace: 'pre-wrap',
   fontSynthesis: 'none',
@@ -468,7 +469,7 @@ const YouCanDoIt = styled('div')({
   top: '125px',
 });
 
-const Group19 = styled('div')({
+const MottoVNGroup = styled('div')({
   display: 'flex',
   position: 'absolute',
   isolation: 'isolate',
@@ -483,7 +484,7 @@ const Group19 = styled('div')({
   top: '76px',
 });
 
-const CôLênNào = styled('div')({
+const MottoVN = styled('div')({
   textAlign: 'left',
   whiteSpace: 'pre-wrap',
   fontSynthesis: 'none',
@@ -517,7 +518,7 @@ const Q1 = styled('div')({
   top: '38px',
 });
 
-const Q2 = styled('div')({
+const MottoKR = styled('div')({
   textAlign: 'center',
   whiteSpace: 'pre-wrap',
   fontSynthesis: 'none',
@@ -537,64 +538,68 @@ const Q2 = styled('div')({
 export default function Footer({ position }) {
   return (
     <div ref={position}>
-      <Footer1>
-        <Group12>
-          <Group10>
+      <Base>
+        <NameGroup>
+          <Name>
             <SitdePk>{'SITDE PK'}</SitdePk>
             <Rectangle4></Rectangle4>
             <Rectangle5></Rectangle5>
             <Q30>{'3.0'}</Q30>
-          </Group10>
-          <Group11>
-            <AiChiNThiLYNgayA>
-              {'ĐAI CHIẾN ĐỀ THI - LẤY NGAY A+'}
-            </AiChiNThiLYNgayA>
-            <Ellipse1 src={Ellipse1Image} loading="lazy" alt={'Ellipse 1'} />
-          </Group11>
-        </Group12>
-        <Line1></Line1>
-        <Group13>
-          <LiênHê>{'LIÊN HÊ'}</LiênHê>
+          </Name>
+          <NameDesc>
+            <DescContent>{'ĐAI CHIẾN ĐỀ THI - LẤY NGAY A+'}</DescContent>
+            <Ellipse1 src={Ellipse1Image} loading="lazy" />
+          </NameDesc>
+        </NameGroup>
+
+        <Separator></Separator>
+
+        <ContactTitle>
+          <ContactContent>{'LIÊN HÊ'}</ContactContent>
           <Ellipse11 src={Ellipse11Image} loading="lazy" alt={'Ellipse 1'} />
-        </Group13>
-        <Group18>
-          <ÔiTác>{'ĐÔI TÁC'}</ÔiTác>
+        </ContactTitle>
+
+        <PartnerTitle>
+          <PartnerContent>{'ĐÔI TÁC'}</PartnerContent>
           <Q />
-        </Group18>
-        <Group17>
-          <Group16>
+        </PartnerTitle>
+
+        <ContactGroup>
+          <Facebook>
             <Link to="https://fb.com/sitdepk" target="_blank">
               <FacebookComSitdepk>{'facebook.com/sitdepk'}</FacebookComSitdepk>
               <IconsaxBoldFacebook>
                 <Vector src={VectorImage} loading="lazy" alt={'Vector'} />
               </IconsaxBoldFacebook>
             </Link>
-          </Group16>
-          <Group15>
+          </Facebook>
+          <Phone>
             <Q0787097309>{'0787 097 309'}</Q0787097309>
             <IconsaxBoldCall>
               <Vector1 src={Vector1Image} loading="lazy" alt={'Vector'} />
             </IconsaxBoldCall>
-          </Group15>
-          <Group14>
+          </Phone>
+          <Mail>
             <SitdepkGmailCom>{'sitdepk@gmail.com'}</SitdepkGmailCom>
             <Image5 src={Image5Image} loading="lazy" alt={'image 5'} />
-          </Group14>
-        </Group17>
+          </Mail>
+        </ContactGroup>
+
         <Link to="https://fb.com/sitdebayquamon" target="_blank">
-          <LogoWhite1 src={LogoWhite1Image} loading="lazy" />
+          <SitdebayquamonLogo src={SitdebayquamonLogoImage} loading="lazy" />
         </Link>
-        <CopyrightBySitdePk20>
-          {'@ Copyright by SITDE PK 2023'}
-        </CopyrightBySitdePk20>
-        <Rectangle15 src={Rectangle15Image} loading="lazy" />
-        <YouCanDoIt>{'YOU CAN DO IT'}</YouCanDoIt>
-        <Group19>
-          <CôLênNào>{'cố lên nào!'}</CôLênNào>
+
+        <Copyright>{'@ Copyright by SITDE PK 2023'}</Copyright>
+
+        <MottoBackground src={MottoBackgroundImage} loading="lazy" />
+
+        <MottoEN>{'YOU CAN DO IT'}</MottoEN>
+        <MottoVNGroup>
+          <MottoVN>{'cố lên nào!'}</MottoVN>
           <Q1 />
-        </Group19>
-        <Q2>{'모두 제일 좋다'}</Q2>
-      </Footer1>
+        </MottoVNGroup>
+        <MottoKR>{'모두 제일 좋다'}</MottoKR>
+      </Base>
     </div>
   );
 }

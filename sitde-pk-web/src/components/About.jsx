@@ -1,10 +1,10 @@
 import React from 'react';
 
-import VectorImage from '../assets/images/About_Vector.png';
+import MoreInfoIco from '../assets/images/About_Vector.png';
 
 import { styled } from '@mui/material/styles';
 
-const About1 = styled('div')({
+const Base = styled('div')({
   backgroundColor: `rgba(255, 255, 255, 1)`,
   display: `flex`,
   position: `relative`,
@@ -20,7 +20,7 @@ const About1 = styled('div')({
   textAlign: `justify`,
 });
 
-const About2 = styled('div')({
+const Base2 = styled('div')({
   textAlign: `left`,
   whiteSpace: `pre-wrap`,
   fontSynthesis: `none`,
@@ -37,7 +37,7 @@ const About2 = styled('div')({
   top: `73px`,
 });
 
-const SitdePkLàDÁnCôngNghPSpan1 = styled('span')({
+const AboutContentSpan1 = styled('span')({
   whiteSpace: `pre-wrap`,
   color: `rgba(0, 0, 0, 1)`,
   fontStyle: `normal`,
@@ -50,7 +50,7 @@ const SitdePkLàDÁnCôngNghPSpan1 = styled('span')({
   textTransform: `none`,
 });
 
-const SitdePkLàDÁnCôngNghPSpan2 = styled('span')({
+const AboutContentSpan2 = styled('span')({
   whiteSpace: `pre-wrap`,
   color: `rgba(0, 0, 0, 1)`,
   fontStyle: `normal`,
@@ -63,7 +63,7 @@ const SitdePkLàDÁnCôngNghPSpan2 = styled('span')({
   textTransform: `none`,
 });
 
-const SitdePkLàDÁnCôngNghPSpan3 = styled('span')({
+const AboutContentSpan3 = styled('span')({
   whiteSpace: `pre-wrap`,
   color: `rgba(0, 0, 0, 1)`,
   fontStyle: `normal`,
@@ -76,7 +76,7 @@ const SitdePkLàDÁnCôngNghPSpan3 = styled('span')({
   textTransform: `none`,
 });
 
-const SitdePkLàDÁnCôngNghPSpan4 = styled('span')({
+const AboutContentSpan4 = styled('span')({
   whiteSpace: `pre-wrap`,
   color: `rgba(0, 0, 0, 1)`,
   fontStyle: `normal`,
@@ -89,7 +89,7 @@ const SitdePkLàDÁnCôngNghPSpan4 = styled('span')({
   textTransform: `none`,
 });
 
-const SitdePkLàDÁnCôngNghPSpan5 = styled('span')({
+const AboutContentSpan5 = styled('span')({
   whiteSpace: `pre-wrap`,
   color: `rgba(0, 0, 0, 1)`,
   fontStyle: `italic`,
@@ -102,7 +102,7 @@ const SitdePkLàDÁnCôngNghPSpan5 = styled('span')({
   textTransform: `none`,
 });
 
-const SitdePkLàDÁnCôngNghPSpan6 = styled('span')({
+const AboutContentSpan6 = styled('span')({
   whiteSpace: `pre-wrap`,
   color: `rgba(0, 0, 0, 1)`,
   fontStyle: `normal`,
@@ -115,7 +115,7 @@ const SitdePkLàDÁnCôngNghPSpan6 = styled('span')({
   textTransform: `none`,
 });
 
-const SitdePkLàDÁnCôngNghP = styled('div')({
+const AboutContent = styled('div')({
   textAlign: `justified`,
   whiteSpace: `pre-wrap`,
   fontSynthesis: `none`,
@@ -135,7 +135,7 @@ const SitdePkLàDÁnCôngNghP = styled('div')({
   top: `181px`,
 });
 
-const Group4 = styled('a')({
+const MoreInfoButton = styled('a')({
   display: `flex`,
   position: `absolute`,
   isolation: `isolate`,
@@ -151,7 +151,7 @@ const Group4 = styled('a')({
   borderRadius: `20px`,
 });
 
-const Rectangle6 = styled('div')({
+const ButtonBackground = styled('div')({
   backgroundColor: `rgba(36, 36, 37, 1)`,
   borderRadius: `20px`,
   width: `203px`,
@@ -161,7 +161,7 @@ const Rectangle6 = styled('div')({
   top: `0px`,
 });
 
-const Frame2 = styled('div')({
+const ButtonContent = styled('div')({
   display: `flex`,
   position: `absolute`,
   isolation: `isolate`,
@@ -176,7 +176,7 @@ const Frame2 = styled('div')({
   top: `12px`,
 });
 
-const TìmHiUThêm = styled('div')({
+const ButtonText = styled('div')({
   textAlign: `left`,
   whiteSpace: `pre-wrap`,
   fontSynthesis: `none`,
@@ -203,24 +203,24 @@ const Vector = styled('img')({
 export default function About({ position }) {
   return (
     <div ref={position}>
-      <About1>
-        <About2>{`ABOUT`}</About2>
-        <SitdePkLàDÁnCôngNghP>
-          <SitdePkLàDÁnCôngNghPSpan1>{`SITDE PK`}</SitdePkLàDÁnCôngNghPSpan1>
-          <SitdePkLàDÁnCôngNghPSpan2>{` là dự án công nghệ phát triển bởi sinh viên `}</SitdePkLàDÁnCôngNghPSpan2>
-          <SitdePkLàDÁnCôngNghPSpan3>{`Viện Công nghệ thông tin và Kinh tế số (SITDE)`}</SitdePkLàDÁnCôngNghPSpan3>
-          <SitdePkLàDÁnCôngNghPSpan4>{`, trường Đại học Kinh tế Quốc dân. Dự án được bắt đầu vào ngày 22/12/2022. Xuất phát từ vấn đề khó khăn khi thiếu đi nguồn tài liệu để ôn tập và tự luyện dưới dạng trắc nghiệm của sinh viên khóa 64`}</SitdePkLàDÁnCôngNghPSpan4>
-          <SitdePkLàDÁnCôngNghPSpan5>{` (khóa đầu tiên chuyển sang hình thức thi trắc nghiệm 100%, trong khi các khóa trước đó hầu hết là thi tự luận)`}</SitdePkLàDÁnCôngNghPSpan5>
-          <SitdePkLàDÁnCôngNghPSpan6>{`, SITDE PK ra đời với mong muốn sẽ là địa điểm học tập và ôn luyện tin cậy của các bạn sinh viên trường Đại học Kinh tế Quốc dân, nhất là đối với các bạn sinh viên thuộc Viện Công nghệ thông tin và Kinh tế số.
-Hy vọng rằng, trong tương lai, SITDE PK sẽ tiếp tục phát triển hơn nữa, mở rộng thêm ra nhiều các học phần của các ngành, khoa/viện khác để trở thành nơi ôn luyện tin cậy không chỉ của sinh viên SITDE mà còn của tất cả các sinh viên NEU.`}</SitdePkLàDÁnCôngNghPSpan6>
-        </SitdePkLàDÁnCôngNghP>
-        <Group4 href="https://fb.com/sitdepk" target="_blank">
-          <Rectangle6></Rectangle6>
-          <Frame2>
-            <TìmHiUThêm>{`Tìm hiểu thêm`}</TìmHiUThêm>
-            <Vector src={VectorImage} loading="lazy" alt={'Vector'} />
-          </Frame2>
-        </Group4>
+      <Base>
+        <Base2>{`ABOUT`}</Base2>
+        <AboutContent>
+          <AboutContentSpan1>{`SITDE PK`}</AboutContentSpan1>
+          <AboutContentSpan2>{` là dự án công nghệ phát triển bởi sinh viên `}</AboutContentSpan2>
+          <AboutContentSpan3>{`Viện Công nghệ thông tin và Kinh tế số (SITDE)`}</AboutContentSpan3>
+          <AboutContentSpan4>{`, trường Đại học Kinh tế Quốc dân. Dự án được bắt đầu vào ngày 22/12/2022. Xuất phát từ vấn đề khó khăn khi thiếu đi nguồn tài liệu để ôn tập và tự luyện dưới dạng trắc nghiệm của sinh viên khóa 64`}</AboutContentSpan4>
+          <AboutContentSpan5>{` (khóa đầu tiên chuyển sang hình thức thi trắc nghiệm 100%, trong khi các khóa trước đó hầu hết là thi tự luận)`}</AboutContentSpan5>
+          <AboutContentSpan6>{`, SITDE PK ra đời với mong muốn sẽ là địa điểm học tập và ôn luyện tin cậy của các bạn sinh viên trường Đại học Kinh tế Quốc dân, nhất là đối với các bạn sinh viên thuộc Viện Công nghệ thông tin và Kinh tế số.
+Hy vọng rằng, trong tương lai, SITDE PK sẽ tiếp tục phát triển hơn nữa, mở rộng thêm ra nhiều các học phần của các ngành, khoa/viện khác để trở thành nơi ôn luyện tin cậy không chỉ của sinh viên SITDE mà còn của tất cả các sinh viên NEU.`}</AboutContentSpan6>
+        </AboutContent>
+        <MoreInfoButton href="https://fb.com/sitdepk" target="_blank">
+          <ButtonBackground></ButtonBackground>
+          <ButtonContent>
+            <ButtonText>{`Tìm hiểu thêm`}</ButtonText>
+            <Vector src={MoreInfoIco} loading="lazy" />
+          </ButtonContent>
+        </MoreInfoButton>
         <iframe
           style={{
             width: `534px`,
@@ -236,7 +236,7 @@ Hy vọng rằng, trong tương lai, SITDE PK sẽ tiếp tục phát triển h�
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
           allowfullscreen
         ></iframe>
-      </About1>
+      </Base>
     </div>
   );
 }
